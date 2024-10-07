@@ -19,8 +19,12 @@ Before you begin, ensure you have the following installed on your machine:
 
 first, clone the repo in your local machine
 
-`git clone {{repo_url}}
+``` bash
 
-cd {{repo_folder}}`
+ git clone {{repo_url}}
+
+cd {{repo_folder}}
+
+```
 
    
