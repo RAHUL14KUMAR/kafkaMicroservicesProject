@@ -13,27 +13,10 @@ const server=new ApolloServer({
     resolvers
 });
 
-const eventHandler=async (event)=>{
-    console.log("event",event)
-    const {type,data}=JSON.parse(event.value.toString());
-    switch(type){
-        case 'product-created':
-            console.log("product-created")
-            break;
-
-        case 'user-created':
-            console.log("user-created")
-            break;
-
-        default:
-            console.log(`Unhandled event type: ${type}`);
-    }
-}
-
 server.start().then(async () => {
     await connectDB();
     await initProducer();
-    await initConsumer(eventHandler);
+    await initConsumer();
 
     server.applyMiddleware({ app });
 
