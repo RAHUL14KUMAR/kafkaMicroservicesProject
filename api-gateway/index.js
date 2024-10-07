@@ -4,16 +4,16 @@ const {createProxyMiddleware}=require('http-proxy-middleware');
 const app=express();
 const port=3000;
 
-app.use('/user',createProxyMiddleware({
-    target: 'http://localhost:4000/graphql',
+app.use('/user', createProxyMiddleware({
+    target: 'http://user-service:4000',
     changeOrigin: true,
-    pathRewrite:{
-        '^user':''
-    }
+    pathRewrite: {
+        '^/user': ''
+    },
 }))
 
 app.use('/product',createProxyMiddleware({
-    target: 'http://localhost:4001/graphql',
+    target: 'http://product-service:4001',
     changeOrigin: true,
     pathRewrite:{
         '^product':''
@@ -21,7 +21,7 @@ app.use('/product',createProxyMiddleware({
 }))
 
 app.use('/order',createProxyMiddleware({
-    target: 'http://localhost:4002/graphql',
+    target: 'http://order-service:4002',
     changeOrigin: true,
     pathRewrite:{
         '^order':''
