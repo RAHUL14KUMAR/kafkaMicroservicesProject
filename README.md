@@ -100,22 +100,22 @@ npm install
 npm start
 ````
 
-By default, the API Gateway should be running on [http://localhost:3000/].
+By default, the API Gateway should be running on (http://localhost:3000/).
 
 `` for user microservices request ``
 
 ```` bash
-[http://localhost:3000/user]
+http://localhost:3000/user
 ````
 
 `` for product microservices request ``
 
 ```` bash
-[http://localhost:3000/product]
+http://localhost:3000/product
 ````
 
 `` for order microservices request ``
 
 ```` bash
-[http://localhost:3000/order]
+http://localhost:3000/order
 ````
