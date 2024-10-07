@@ -72,9 +72,28 @@ docker-compose up
 
 This will build the Docker images and spin up the containers for each microservice.
 
-Using the Microservices After the containers have started, you can begin interacting with the microservices through the API Gateway, which exposes a GraphQL endpoint.
+This will also allow you to use/run the microservices without calling api-gateway
 
-6- 
+`` run the following http request in the server ``
+
+``for user services``
+```` bash
+http://localhost:4000/graphql
+````
+
+`` for product services ``
+```` bash
+http://localhost:4002/graphql
+````
+
+`` for order services ``
+```` bash
+http://localhost:4003/graphql
+````
+
+
+
+6- Using the Microservices After the containers have started, you can begin interacting with the microservices through the API Gateway, which exposes a GraphQL endpoint.
 ```` bash
 cd api-gateway
 npm install
