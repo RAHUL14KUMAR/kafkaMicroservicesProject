@@ -42,7 +42,7 @@ cd user-service
 Create a .env file and inside it pass the below parametre
 
 ```` bash
-MONGO_DB_URL=mongodb+srv://<username>:<password>@<cluster-url>/dbname?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>/dbname?retryWrites=true&w=majority
 RABBITMQ_URL=amqp://<username>:<password>@<broker-url>
 
 JWT_SECRET=<your_jwt_secret>
